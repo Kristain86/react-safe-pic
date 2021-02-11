@@ -1,10 +1,37 @@
 import React from 'react'
 
-import { ExampleComponent } from 'safe-pic'
+import { SafePic } from 'safe-pic'
 import 'safe-pic/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <>
+      <SafePic
+        jpgImage={'https://www.gstatic.com/webp/gallery/1.jpg'}
+        webpImage={'https://www.gstatic.com/webp/gallery/2.webp'}
+        errorImage={'https://placehold.it/404x404'}
+        alt={'this is the way'}
+        errorImageAlt={'this is not the way'}
+        /*  blur={'2px'} */
+        filterColor={
+          'linear-gradient(0deg, rgba(233,233,233,1) 38%, rgba(219,255,141,1) 54%, rgba(51,162,186,1) 100%)'
+        }
+        filterOpacity={0.5}
+      />
+
+      <SafePic
+        jpgImage={'https://www.gstatic.com/webp/gallery/1.jpg'}
+        webpImage={'https://www.gstatic.com/webp/gallery/2.webp'}
+        errorImage={'https://placehold.it/202x202'}
+        alt={'this is my way'}
+        errorImageAlt={'this is not the way, really'}
+        /*  blur={'2px'} */
+
+        /*   filterColor={"#00afb9"}
+  filterOpacity={0.5} */
+      />
+    </>
+  )
 }
 
 export default App
