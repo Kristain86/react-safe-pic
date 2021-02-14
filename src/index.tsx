@@ -12,7 +12,7 @@ interface Props {
   errorImageAlt?: string
   borderRadius?: string
 }
-
+  
 export const SafePic = ({
   regularImage,
   webpImage,

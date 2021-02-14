@@ -35,9 +35,9 @@ const App = () => {
 
 ## How it works and when to use it?
 
-<p>react-safe-pic main job is to keep image compatibility in all browsers, an example of this is: if we charged and .webP extension image and a .jpg/png extension image, in safari will render the jpg/png image and in Chrome, Firefox, etc. the next gen .webP image.</p>
+<p>React-safe-pic main job is to keep image compatibility in all browsers </p>
 
-<p>Also react-safe-pic it has 2 fallbacks to keep it safe and easy. If webp fails it will load the jpg/png image, and if jpg/png image fails as well you can handle the error and showing a default error image! This is great also if you want to decide to show either a diferent .webp and jpg/png picture in the same component! </p>
+<p>Also react-safe-pic it has 2 fallbacks to keep it safe and easy. If .webp fails it will load the jpg/png image, and if jpg/png image fails as well you can handle the error and showing a default error image! This is great also if you want to decide to show either a diferent .webp and jpg/png picture in the same component! </p>
 
 ## Customize your picture?
 
@@ -47,7 +47,7 @@ const App = () => {
 
 | Prop    | Description |
 | ------- | ----------- |
-| example | example     |
+| regularImage | example     |
 |         |             |
 |         |             |
 

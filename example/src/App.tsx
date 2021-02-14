@@ -17,7 +17,7 @@ const App = () => {
           'linear-gradient(0deg, rgba(233,233,233,1) 38%, rgba(219,255,141,1) 54%, rgba(51,162,186,1) 100%)'
         }
         filterOpacity={0.5}
-     
+        borderRadius={'20px'}
       />
 
       <SafePic
