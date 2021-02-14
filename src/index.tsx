@@ -2,7 +2,7 @@ import React, { useState, Fragment } from 'react'
 import { PicComponent } from './style'
 
 interface Props {
-  jpgImage: string
+  regularImage: string
   webpImage: string
   filterColor?: string
   filterOpacity?: number
@@ -10,39 +10,29 @@ interface Props {
   errorImage?: string
   alt?: string
   errorImageAlt?: string
+  borderRadius?: string
 }
 
 export const SafePic = ({
-  jpgImage,
+  regularImage,
   webpImage,
   filterColor,
   filterOpacity,
   blur,
   errorImage,
-  alt
+  alt,
+  borderRadius
 }: /*   errorImageAlt */
 Props) => {
-  console.log('no', webpImage, 'no', jpgImage)
-
   const [error, setError] = useState(false)
-  const [image, setImage] = useState(jpgImage)
+  const [image, setImage] = useState(regularImage)
 
-  const onError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    console.log(e.target)
-
+  const onError = () => {
     setError(true)
   }
 
   const onError2 = () => {
-
     setImage(String(errorImage))
-    
-  }
-
-  console.log(error)
-
-  if (webpImage) {
-    console.log('ifff', webpImage, errorImage)
   }
 
   return (
@@ -50,22 +40,22 @@ Props) => {
       filterColor={filterColor ? filterColor : ''}
       filterOpacity={filterOpacity ? filterOpacity : 1}
       blur={blur}
+      borderRadius={borderRadius}
     >
       <picture>
         {!error && (
           <Fragment>
             <source srcSet={webpImage} type='image/webp' />
-            <source srcSet={jpgImage} type='image/jpg' />
+            <source srcSet={regularImage} type='image/jpg' />
           </Fragment>
         )}
 
         {!error ? (
           <img
-            src={jpgImage}
-            srcSet={jpgImage}
+            src={regularImage}
+            srcSet={regularImage}
             alt={alt}
-            className='googd'
-            onError={(e) => onError(e)}
+            onError={onError}
           />
         ) : (
           <img src={image} srcSet={image} alt={alt} onError={onError2} />
