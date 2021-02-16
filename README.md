@@ -1,6 +1,6 @@
 # react-safe-pic
 
-<p> A react library for image compatibillity and a definitive solution to google's "Serve images in next-gen formats" warning </p>
+<p> A react library for image compatibillity and a definitive solution to google's "Serve images in next-gen formats" warning, don't use img tag no more, try react-safe-pic! </p>
 
 ## Install
 
@@ -52,6 +52,10 @@ const App = () => {
 | <b>errorImageAlt (optional)</b> | type: string. The alt attribute of the error image |
 | <b>borderRadius (optional)</b> | type: string. Put border radius to the image |
 
-## License
+## License and contact
 
-MIT © [kristain](https://github.com/kristain)
+All feedback is appreciated sooo much and also suggestion about new features are most than welcome!
+
+contact: cristiansagula@gmail.com
+
+MIT © [kristain86](https://github.com/kristain86)
